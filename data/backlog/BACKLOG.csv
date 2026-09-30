@@ -1,0 +1,8 @@
+ID,priority,domain,task,status,created_at,updated_at,source,definition_of_done,dependencies,model_tier,estimated_cost,actual_cost,output_artifacts
+VM-001,P0,strategy,"Define the authorial logic connecting tattoo, painting, illustration and design",open,2026-09-29,2026-09-29,spec/BACKLOG.csv,A clear non-generic thesis with 3-5 testable implications,,default,,,
+VM-002,P0,career,Design the transition model: tattoo cash engine → increasing painting capital,open,2026-09-29,2026-09-29,spec/BACKLOG.csv,24-month transition map without pretending painting already pays the bills,,default,,,
+VM-003,P1,editorial,Find 5 non-template editorial structures that can contain all Viktor Mir practices,open,2026-09-29,2026-09-29,spec/BACKLOG.csv,"Each structure must feel like an authorial system, not SMM rubrics",,default,,,
+VM-004,P1,archive,"Define minimum metadata schema for artworks, tattoos and design projects",open,2026-09-29,2026-09-29,spec/BACKLOG.csv,CSV/JSON schema suitable for future retrieval,,cheap,,,
+VM-005,P1,research,Build a research framework for comparable multidisciplinary artists,open,2026-09-29,2026-09-29,spec/BACKLOG.csv,Research questions + inclusion/exclusion criteria,,default,,,
+VM-006,P2,voice,Separate Viktor's real voice from polished institutional/gallery voice,open,2026-09-29,2026-09-29,spec/BACKLOG.csv,Two voice guides + rules for when each is used,,default,,,
+VM-007,P2,commercial,Map separate journeys for tattoo client vs art collector,open,2026-09-29,2026-09-29,spec/BACKLOG.csv,Two funnels under one author identity without splitting the brand,,default,,,

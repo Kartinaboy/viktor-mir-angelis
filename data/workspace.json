@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "state": {
+    "version": "0.1",
+    "identity": {
+      "public_center": "Viktor Mir as artist / visual author",
+      "commercial_engine_now": "tattooing",
+      "strategic_destination": "painting becomes a major source of artistic status and income",
+      "supporting_practices": [
+        "design",
+        "illustration"
+      ]
+    },
+    "constraints": {
+      "output_modalities": [
+        "text",
+        "markdown",
+        "csv",
+        "json"
+      ],
+      "image_generation": false,
+      "video_generation": false,
+      "autopublish": false
+    },
+    "active_questions": [
+      "What is the coherent authorial logic connecting tattoo, painting, illustration and design?",
+      "How can tattoo income finance the transition without fixing Viktor permanently in the tattoo category?",
+      "What recurring editorial structures can build recognition of Viktor as an artist rather than only a tattooer?",
+      "What evidence, archive material and new documentation are needed to support this transition?"
+    ],
+    "current_hypotheses": [],
+    "open_decisions": [],
+    "last_updated": "2026-09-29",
+    "current_priorities": [],
+    "latest_findings": [],
+    "pointers": [],
+    "active_projects": []
+  },
+  "backlog": [
+    {
+      "ID": "VM-001",
+      "priority": "P0",
+      "domain": "strategy",
+      "task": "Define the authorial logic connecting tattoo, painting, illustration and design",
+      "status": "open",
+      "created_at": "2026-09-29",
+      "updated_at": "2026-09-29",
+      "source": "spec/BACKLOG.csv",
+      "definition_of_done": "A clear non-generic thesis with 3-5 testable implications",
+      "dependencies": "",
+      "model_tier": "default",
+      "estimated_cost": "",
+      "actual_cost": "",
+      "output_artifacts": ""
+    },
+    {
+      "ID": "VM-002",
+      "priority": "P0",
+      "domain": "career",
+      "task": "Design the transition model: tattoo cash engine → increasing painting capital",
+      "status": "open",
+      "created_at": "2026-09-29",
+      "updated_at": "2026-09-29",
+      "source": "spec/BACKLOG.csv",
+      "definition_of_done": "24-month transition map without pretending painting already pays the bills",
+      "dependencies": "",
+      "model_tier": "default",
+      "estimated_cost": "",
+      "actual_cost": "",
+      "output_artifacts": ""
+    },
+    {
+      "ID": "VM-003",
+      "priority": "P1",
+      "domain": "editorial",
+      "task": "Find 5 non-template editorial structures that can contain all Viktor Mir practices",
+      "status": "open",
+      "created_at": "2026-09-29",
+      "updated_at": "2026-09-29",
+      "source": "spec/BACKLOG.csv",
+      "definition_of_done": "Each structure must feel like an authorial system, not SMM rubrics",
+      "dependencies": "",
+      "model_tier": "default",
+      "estimated_cost": "",
+      "actual_cost": "",
+      "output_artifacts": ""
+    },
+    {
+      "ID": "VM-004",
+      "priority": "P1",
+      "domain": "archive",
+      "task": "Define minimum metadata schema for artworks, tattoos and design projects",
+      "status": "open",
+      "created_at": "2026-09-29",
+      "updated_at": "2026-09-29",
+      "source": "spec/BACKLOG.csv",
+      "definition_of_done": "CSV/JSON schema suitable for future retrieval",
+      "dependencies": "",
+      "model_tier": "cheap",
+      "estimated_cost": "",
+      "actual_cost": "",
+      "output_artifacts": ""
+    },
+    {
+      "ID": "VM-005",
+      "priority": "P1",
+      "domain": "research",
+      "task": "Build a research framework for comparable multidisciplinary artists",
+      "status": "open",
+      "created_at": "2026-09-29",
+      "updated_at": "2026-09-29",
+      "source": "spec/BACKLOG.csv",
+      "definition_of_done": "Research questions + inclusion/exclusion criteria",
+      "dependencies": "",
+      "model_tier": "default",
+      "estimated_cost": "",
+      "actual_cost": "",
+      "output_artifacts": ""
+    },
+    {
+      "ID": "VM-006",
+      "priority": "P2",
+      "domain": "voice",
+      "task": "Separate Viktor's real voice from polished institutional/gallery voice",
+      "status": "open",
+      "created_at": "2026-09-29",
+      "updated_at": "2026-09-29",
+      "source": "spec/BACKLOG.csv",
+      "definition_of_done": "Two voice guides + rules for when each is used",
+      "dependencies": "",
+      "model_tier": "default",
+      "estimated_cost": "",
+      "actual_cost": "",
+      "output_artifacts": ""
+    },
+    {
+      "ID": "VM-007",
+      "priority": "P2",
+      "domain": "commercial",
+      "task": "Map separate journeys for tattoo client vs art collector",
+      "status": "open",
+      "created_at": "2026-09-29",
+      "updated_at": "2026-09-29",
+      "source": "spec/BACKLOG.csv",
+      "definition_of_done": "Two funnels under one author identity without splitting the brand",
+      "dependencies": "",
+      "model_tier": "default",
+      "estimated_cost": "",
+      "actual_cost": "",
+      "output_artifacts": ""
+    }
+  ],
+  "settings": {
+    "models": {
+      "strategic": "gpt-6-astra",
+      "default": "gpt-6-sol",
+      "cheap": "gpt-6-luna"
+    },
+    "reasoning_effort": "medium",
+    "daily_budget": 2,
+    "run_budget": 0.35,
+    "max_output_tokens": 6000,
+    "timezone": "Europe/Moscow",
+    "roles": {
+      "strategist": true,
+      "researcher": true,
+      "red_team": true,
+      "editor": true,
+      "commercial_bridge": true,
+      "archivist": true
+    },
+    "web_research": false,
+    "scheduler_enabled": false,
+    "autonomous_mode": false,
+    "jobs": [
+      {
+        "id": "morning",
+        "title": "Утренний обзор STATE",
+        "time": "08:00",
+        "enabled": true
+      },
+      {
+        "id": "backlog",
+        "title": "Задача из BACKLOG",
+        "time": "09:00",
+        "enabled": true
+      },
+      {
+        "id": "report",
+        "title": "Вечерний отчёт",
+        "time": "21:00",
+        "enabled": true
+      },
+      {
+        "id": "maintenance",
+        "title": "Обслуживание архива",
+        "time": "23:00",
+        "enabled": true
+      }
+    ],
+    "pricing": {
+      "gpt-6-astra": {
+        "input": 10,
+        "cached": 1,
+        "output": 50,
+        "cache_write": 12.5,
+        "context_limit": 1050000
+      },
+      "gpt-6-sol": {
+        "input": 2,
+        "cached": 0.2,
+        "output": 10,
+        "cache_write": 2.5,
+        "context_limit": 1050000
+      },
+      "gpt-6-luna": {
+        "input": 0.1,
+        "cached": 0.01,
+        "output": 0.5,
+        "cache_write": 0.125,
+        "context_limit": 1050000
+      }
+    },
+    "pricing_checked_at": "2026-09-30",
+    "search_call_usd": 0.01
+  },
+  "runs": {},
+  "journal": [],
+  "artifacts": {},
+  "lease": null,
+  "schedule_last": {},
+  "onboarding_completed": false,
+  "updated_at": "2026-09-30T08:48:15.319315+00:00"
+}

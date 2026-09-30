@@ -1,8 +1,0 @@
-﻿priority,domain,task,status,definition_of_done
-P0,strategy,"Define the authorial logic connecting tattoo, painting, illustration and design",open,A clear non-generic thesis with 3-5 testable implications
-P0,career,Design the transition model: tattoo cash engine → increasing painting capital,open,24-month transition map without pretending painting already pays the bills
-P1,editorial,Find 5 non-template editorial structures that can contain all Viktor Mir practices,open,"Each structure must feel like an authorial system, not SMM rubrics"
-P1,archive,"Define minimum metadata schema for artworks, tattoos and design projects",open,CSV/JSON schema suitable for future retrieval
-P1,research,Build a research framework for comparable multidisciplinary artists,open,Research questions + inclusion/exclusion criteria
-P2,voice,Separate Viktor's real voice from polished institutional/gallery voice,open,Two voice guides + rules for when each is used
-P2,commercial,Map separate journeys for tattoo client vs art collector,open,Two funnels under one author identity without splitting the brand
