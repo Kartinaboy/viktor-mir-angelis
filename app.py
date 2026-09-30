@@ -269,6 +269,10 @@ def journal(data):
 
 def settings(data, store):
     saved = data["settings"]
+    if hasattr(store, "repository"):
+        st.caption(f"GitHub: {store.repository} · ветка {store.branch}")
+        if not store.is_private:
+            st.caption("Публичное хранение: память, журнал и черновики доступны в GitHub. Пароль приложения защищает вход и запуск запросов.")
     st.write("Изменения вступают в силу после сохранения. Расписание по умолчанию выключено.")
     with st.form("settings"):
         updated = copy.deepcopy(saved)
@@ -322,6 +326,8 @@ def main():
     if secrets["ANGELIS_STORAGE"] == "github" and not password:
         st.info("Первое подключение: укажи ключ OpenAI, GitHub token и личный пароль в настройках нового приложения Streamlit.")
         st.markdown("Инструкция: **README.md** в репозитории. Готовый пример Secrets находится в **.streamlit/secrets.example.toml**. Настоящие ключи в файлы GitHub не вставляй.")
+        st.code('OPENAI_API_KEY = "YOUR_OPENAI_KEY"\nGITHUB_TOKEN = "YOUR_FINE_GRAINED_TOKEN"\nGITHUB_REPO = "Kartinaboy/viktor-mir-angelis"\nGITHUB_DATA_BRANCH = "angelis-data"\nAPP_PASSWORD = "YOUR_PRIVATE_PASSWORD"\nANGELIS_STORAGE = "github"', language="toml")
+        st.markdown("GitHub token: [создать fine-grained token](https://github.com/settings/personal-access-tokens/new), выбрать только `viktor-mir-angelis`, **Contents → Read and write**. Ключи и пароль вводи в **Streamlit → Settings → Secrets**.")
         st.stop()
     digest = hashlib.sha256(password.encode()).hexdigest() if password else ""
     if password and st.session_state.get("authenticated") != digest:

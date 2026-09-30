@@ -124,7 +124,7 @@ class GitHubStore:
     """Atomic Git tree commits; compare-and-swap through fast-forward-only ref updates.
 
     No credentials or API keys are stored in workspace.json or Git commits.
-    The data branch must be private. UI and Actions share the same branch.
+    Data visibility follows the repository. UI and Actions share the same branch.
     """
     def __init__(self, repository: str, token: str, branch="angelis-data"):
         if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repository):
@@ -135,8 +135,7 @@ class GitHubStore:
         self.session = requests.Session()
         self.session.headers.update({"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"})
         repo = self._request("GET", "")
-        if not repo.get("private"):
-            raise ValueError("Состояние Ангелис можно сохранять только в приватном репозитории")
+        self.is_private = bool(repo.get("private"))
         if branch == repo["default_branch"]:
             raise ValueError("Ветка данных должна отличаться от основной ветки")
         if self._request("GET", f"/git/ref/heads/{branch}", allow_missing=True) is None:

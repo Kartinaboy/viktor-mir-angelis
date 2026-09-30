@@ -2,11 +2,14 @@ import base64
 import copy
 import json
 
+import pytest
+
 from core.storage import Conflict, GitHubStore, projections, seed
 
 
 class FakeAPI:
-    def __init__(self):
+    def __init__(self, private=True):
+        self.private = private
         self.head = "initial"
         self.snapshots = {"initial": projections(seed())}
         self.trees = {}
@@ -16,7 +19,7 @@ class FakeAPI:
 
     def request(self, method, path, body=None, allow_missing=False):
         if path == "" and method == "GET":
-            return {"private": True, "default_branch": "main"}
+            return {"private": self.private, "default_branch": "main"}
         if path == "/git/ref/heads/angelis-data":
             return {"object": {"sha": self.head}}
         if path.startswith("/contents/data/workspace.json?ref="):
@@ -53,10 +56,11 @@ class FakeAPI:
         raise AssertionError((method, path, body))
 
 
-def test_git_commit_is_atomic_and_retries_without_losing_concurrent_edits(monkeypatch):
-    api = FakeAPI()
+@pytest.mark.parametrize("private", [True, False])
+def test_git_commit_is_atomic_and_retries_without_losing_concurrent_edits(monkeypatch, private):
+    api = FakeAPI(private)
     monkeypatch.setattr(GitHubStore, "_request", lambda self, *args, **kwargs: api.request(*args, **kwargs))
-    store = GitHubStore("owner/private", "test-token")
+    store = GitHubStore("owner/workspace", "test-token")
     api.conflict_once = True
     store.transact(lambda data: data["state"]["active_questions"].append("Our new question"))
     data = store.load()
