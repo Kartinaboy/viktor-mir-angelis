@@ -1,6 +1,6 @@
 {
   "id": "run-d7dadf851322",
-  "status": "queued",
+  "status": "running",
   "mode": "dry",
   "mock": false,
   "started_at": "2026-09-30T12:41:04.253001+00:00",
@@ -42,7 +42,7 @@
   "artifacts": [],
   "summary": "",
   "cancel_requested": false,
-  "stage": "OBSERVE",
+  "stage": "FRAME",
   "quality_flags": [],
   "schedule_key": null
 }

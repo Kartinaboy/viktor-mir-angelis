@@ -1,3 +1,4 @@
 {"timestamp": "2026-09-30T12:41:04.253048+00:00", "run_id": "run-d7dadf851322", "event": "run_started", "role": "angelis", "model": "", "message": "Режим: dry; задача VM-001", "stage": "OBSERVE"}
 {"timestamp": "2026-09-30T12:41:04.253058+00:00", "run_id": "run-d7dadf851322", "event": "state_loaded", "role": "angelis", "model": "", "message": "Прочитаны STATE, BACKLOG, настройки и указатели последних материалов.", "stage": "OBSERVE", "source_files": ["data/state/STATE.json", "data/backlog/BACKLOG.csv"]}
 {"timestamp": "2026-09-30T12:41:04.253065+00:00", "run_id": "run-d7dadf851322", "event": "task_selected", "role": "angelis", "model": "", "message": "Выбрана VM-001: P0; зависимости выполнены. Стратегический долг имеет приоритет.", "stage": "SELECT TASK"}
+{"timestamp": "2026-09-30T12:41:06.969212+00:00", "run_id": "run-d7dadf851322", "event": "progress", "role": "angelis", "model": "", "message": "Формулируется задача и критерий готовности.", "stage": "FRAME"}
