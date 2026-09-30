@@ -224,11 +224,95 @@
     "pricing_checked_at": "2026-09-30",
     "search_call_usd": 0.01
   },
-  "runs": {},
-  "journal": [],
+  "runs": {
+    "run-d7dadf851322": {
+      "id": "run-d7dadf851322",
+      "status": "queued",
+      "mode": "dry",
+      "mock": false,
+      "started_at": "2026-09-30T12:41:04.253001+00:00",
+      "task": {
+        "ID": "VM-001",
+        "priority": "P0",
+        "domain": "strategy",
+        "task": "Define the authorial logic connecting tattoo, painting, illustration and design",
+        "status": "open",
+        "created_at": "2026-09-29",
+        "updated_at": "2026-09-29",
+        "source": "spec/BACKLOG.csv",
+        "definition_of_done": "A clear non-generic thesis with 3-5 testable implications",
+        "dependencies": "",
+        "model_tier": "default",
+        "estimated_cost": "",
+        "actual_cost": "",
+        "output_artifacts": ""
+      },
+      "plan": [
+        {
+          "role": "angelis",
+          "tier": "default",
+          "max_output": 6000,
+          "web": false,
+          "model": "gpt-6-sol",
+          "max_passes": 1
+        },
+        {
+          "role": "red_team",
+          "tier": "default",
+          "max_output": 1200,
+          "web": false,
+          "model": "gpt-6-sol",
+          "max_passes": 1
+        }
+      ],
+      "calls": [],
+      "artifacts": [],
+      "summary": "",
+      "cancel_requested": false,
+      "stage": "OBSERVE",
+      "quality_flags": [],
+      "schedule_key": null
+    }
+  },
+  "journal": [
+    {
+      "timestamp": "2026-09-30T12:41:04.253048+00:00",
+      "run_id": "run-d7dadf851322",
+      "event": "run_started",
+      "role": "angelis",
+      "model": "",
+      "message": "Режим: dry; задача VM-001",
+      "stage": "OBSERVE"
+    },
+    {
+      "timestamp": "2026-09-30T12:41:04.253058+00:00",
+      "run_id": "run-d7dadf851322",
+      "event": "state_loaded",
+      "role": "angelis",
+      "model": "",
+      "message": "Прочитаны STATE, BACKLOG, настройки и указатели последних материалов.",
+      "stage": "OBSERVE",
+      "source_files": [
+        "data/state/STATE.json",
+        "data/backlog/BACKLOG.csv"
+      ]
+    },
+    {
+      "timestamp": "2026-09-30T12:41:04.253065+00:00",
+      "run_id": "run-d7dadf851322",
+      "event": "task_selected",
+      "role": "angelis",
+      "model": "",
+      "message": "Выбрана VM-001: P0; зависимости выполнены. Стратегический долг имеет приоритет.",
+      "stage": "SELECT TASK"
+    }
+  ],
   "artifacts": {},
-  "lease": null,
+  "lease": {
+    "run_id": "run-d7dadf851322",
+    "until": "2026-09-30T12:51:04.253031+00:00"
+  },
   "schedule_last": {},
   "onboarding_completed": false,
-  "updated_at": "2026-09-30T08:48:15.319315+00:00"
+  "updated_at": "2026-09-30T12:41:04.253114+00:00"
 }
