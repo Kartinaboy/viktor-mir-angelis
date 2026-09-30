@@ -1,6 +1,6 @@
 {
   "id": "run-d7dadf851322",
-  "status": "running",
+  "status": "completed",
   "mode": "dry",
   "mock": false,
   "started_at": "2026-09-30T12:41:04.253001+00:00",
@@ -40,9 +40,10 @@
   ],
   "calls": [],
   "artifacts": [],
-  "summary": "",
+  "summary": "Dry Run: STATE/BACKLOG прочитаны; план ролей сохранён. API не вызывался, artifacts и стратегическая память не изменены.",
   "cancel_requested": false,
-  "stage": "FRAME",
+  "stage": "RUN SUMMARY",
   "quality_flags": [],
-  "schedule_key": null
+  "schedule_key": null,
+  "finished_at": "2026-09-30T12:41:09.332786+00:00"
 }

@@ -227,7 +227,7 @@
   "runs": {
     "run-d7dadf851322": {
       "id": "run-d7dadf851322",
-      "status": "running",
+      "status": "completed",
       "mode": "dry",
       "mock": false,
       "started_at": "2026-09-30T12:41:04.253001+00:00",
@@ -267,11 +267,12 @@
       ],
       "calls": [],
       "artifacts": [],
-      "summary": "",
+      "summary": "Dry Run: STATE/BACKLOG прочитаны; план ролей сохранён. API не вызывался, artifacts и стратегическая память не изменены.",
       "cancel_requested": false,
-      "stage": "FRAME",
+      "stage": "RUN SUMMARY",
       "quality_flags": [],
-      "schedule_key": null
+      "schedule_key": null,
+      "finished_at": "2026-09-30T12:41:09.332786+00:00"
     }
   },
   "journal": [
@@ -314,14 +315,38 @@
       "model": "",
       "message": "Формулируется задача и критерий готовности.",
       "stage": "FRAME"
+    },
+    {
+      "timestamp": "2026-09-30T12:41:09.332804+00:00",
+      "run_id": "run-d7dadf851322",
+      "event": "run_completed",
+      "role": "angelis",
+      "model": "",
+      "message": "Dry Run: STATE/BACKLOG прочитаны; план ролей сохранён. API не вызывался, artifacts и стратегическая память не изменены.",
+      "stage": "RUN SUMMARY",
+      "plan": [
+        {
+          "role": "angelis",
+          "tier": "default",
+          "max_output": 6000,
+          "web": false,
+          "model": "gpt-6-sol",
+          "max_passes": 1
+        },
+        {
+          "role": "red_team",
+          "tier": "default",
+          "max_output": 1200,
+          "web": false,
+          "model": "gpt-6-sol",
+          "max_passes": 1
+        }
+      ]
     }
   ],
   "artifacts": {},
-  "lease": {
-    "run_id": "run-d7dadf851322",
-    "until": "2026-09-30T12:51:06.969193+00:00"
-  },
+  "lease": null,
   "schedule_last": {},
   "onboarding_completed": false,
-  "updated_at": "2026-09-30T12:41:06.969254+00:00"
+  "updated_at": "2026-09-30T12:41:09.332846+00:00"
 }
