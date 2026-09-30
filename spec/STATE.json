@@ -1,0 +1,32 @@
+{
+  "version": "0.1",
+  "identity": {
+    "public_center": "Viktor Mir as artist / visual author",
+    "commercial_engine_now": "tattooing",
+    "strategic_destination": "painting becomes a major source of artistic status and income",
+    "supporting_practices": [
+      "design",
+      "illustration"
+    ]
+  },
+  "constraints": {
+    "output_modalities": [
+      "text",
+      "markdown",
+      "csv",
+      "json"
+    ],
+    "image_generation": false,
+    "video_generation": false,
+    "autopublish": false
+  },
+  "active_questions": [
+    "What is the coherent authorial logic connecting tattoo, painting, illustration and design?",
+    "How can tattoo income finance the transition without fixing Viktor permanently in the tattoo category?",
+    "What recurring editorial structures can build recognition of Viktor as an artist rather than only a tattooer?",
+    "What evidence, archive material and new documentation are needed to support this transition?"
+  ],
+  "current_hypotheses": [],
+  "open_decisions": [],
+  "last_updated": "2026-09-29"
+}

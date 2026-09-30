@@ -1,0 +1,2 @@
+-r requirements-worker.txt
+streamlit==1.64.0
